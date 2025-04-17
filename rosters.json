@@ -1,0 +1,28 @@
+[
+  {
+    "town": "Demarest",
+    "sport": "lacrosse",
+    "colors": ["#003366", "#FFD700"],
+    "logo": "https://upload.wikimedia.org/wikipedia/en/3/3a/NV-Demarest_Norsemen_logo.png",
+    "players": [
+      "Max Brickman", "Dylan Distelburger", "Jackson Dickstein", "Kurt Onal", "Cody Weiss",
+      "Lucas Sands", "Ron Rozenthal", "Brian Tompkins", "Andrew Khawaja", "Aristotelis Paliouras",
+      "Tanner Brickman", "Tohar Hatooka", "Harrison White", "Markus White", "Lukas",
+      "Jesse Lavin", "Ethan Kim", "Dylan Entner", "Ryan Shklyar", "George Yako", "Neil Bernhaut"
+    ]
+  },
+  {
+    "town": "Paramus",
+    "sport": "lacrosse",
+    "colors": ["#002147", "#FFFFFF"],
+    "logo": "https://upload.wikimedia.org/wikipedia/en/b/bb/Paramus_High_School_logo.png",
+    "players": [
+      "Jacob Sabbach", "Seamus Donoghue", "Silvio Fernandes", "Joseph Zakko", "Anthony Digiacomo",
+      "Anthony Kallergis", "Vincent Palmieri", "Thomas Hosie", "Marcello Petruzzella", "Luca Distefano",
+      "Joe Minervini", "Shane Mancuso", "Mark Gass", "Theo Perides", "Matt Zakko",
+      "Aaron Kates", "Dylan Joyce", "Mason Bellinger", "Gabriel Akdemir", "Logan Rickard",
+      "Spencer Schechter", "Danny Campbell", "Domenic Bartolomeo", "Luca Mannina", "Malik Saleh",
+      "Lucas Khalil", "Jason Joyce", "Rasit Cetin"
+    ]
+  }
+]
