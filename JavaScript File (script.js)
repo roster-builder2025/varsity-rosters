@@ -1,0 +1,46 @@
+const API_URL = 'https://yourusername.github.io/your-repo/rosters.json'; // replace with real URL
+
+async function generateChart() {
+  const town = document.getElementById('townInput').value.toLowerCase().trim();
+  const sport = document.getElementById('sportSelect').value;
+  const container = document.getElementById('chartContainer');
+
+  try {
+    const response = await fetch(API_URL);
+    const data = await response.json();
+
+    const team = data.find(entry =>
+      entry.town.toLowerCase() === town && entry.sport.toLowerCase() === sport
+    );
+
+    if (!team) {
+      container.innerHTML = `<p style="text-align:center;">No team found for ${town} ${sport}.</p>`;
+      container.style.backgroundImage = '';
+      return;
+    }
+
+    const colors = team.colors;
+    const players = team.players.slice(0, 35);
+    const logo = team.logo;
+
+    container.style.backgroundColor = colors[0];
+    container.style.color = colors[1];
+    container.style.setProperty('--accent', colors[1]);
+    container.style.backgroundImage = `url(${logo})`;
+
+    let tableHTML = '<table><tbody>';
+    for (let i = 0; i < 5; i++) {
+      tableHTML += '<tr>';
+      for (let j = 0; j < 7; j++) {
+        const name = players[i * 7 + j] || '';
+        tableHTML += `<td style="background-color:${colors[1]}; color:${colors[0]}">${name}</td>`;
+      }
+      tableHTML += '</tr>';
+    }
+    tableHTML += '</tbody></table>';
+    container.innerHTML = tableHTML;
+  } catch (err) {
+    console.error('Fetch error:', err);
+    container.innerHTML = `<p style="text-align:center;">Error loading roster.</p>`;
+  }
+}
