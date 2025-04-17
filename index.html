@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Varsity Chart Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Varsity Chart Generator</h1>
+    <form id="rosterForm">
+      <input type="text" id="town" placeholder="Enter town" required />
+      <select id="sport">
+        <option value="lacrosse">Lacrosse</option>
+        <option value="basketball">Basketball</option>
+        <!-- Add more sports -->
+      </select>
+      <button type="submit">Generate</button>
+    </form>
+
+    <div id="card" class="roster-card">
+      <!-- Chart appears here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
